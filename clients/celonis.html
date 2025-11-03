@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Documents - Celonis | Matrix Intelligence</title>
+    <link rel="stylesheet" href="../assets/css/matrix-design.css">
+    <style>
+        .client-portal {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .hub-header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border-left: 4px solid #00c2ff;
+            text-align: center;
+        }
+
+        .files-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            margin-bottom: 3rem;
+        }
+
+        .matrix-file-card {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .matrix-file-card:hover {
+            transform: translateY(-5px);
+            border-color: #00c2ff;
+            box-shadow: 0 10px 25px rgba(0, 194, 255, 0.1);
+        }
+
+        .back-button {
+            color: #00c2ff;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            padding: 0.5rem 1rem;
+            border: 2px solid #00c2ff;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: #00c2ff;
+            color: white;
+        }
+
+        .client-badge {
+            background: #00c2ff;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-left: 1rem;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .file-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .file-description {
+            color: #64748b;
+            margin: 0.5rem 0 1.5rem 0;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="client-portal">
+        <!-- Header Navigation -->
+        <div class="nav-container">
+            <a href="../index.html" class="back-button">
+                ← Back to Client Portal
+            </a>
+            <div style="display: flex; align-items: center;">
+                <span class="client-badge">Celonis</span>
+            </div>
+        </div>
+
+        <!-- Client Header -->
+        <div class="hub-header">
+            <h1>⚡ Your Secure Documents</h1>
+            <p>Celonis • Process Mining Intelligence & Execution Management</p>
+            <p style="margin-top: 1rem; opacity: 0.8; font-size: 0.9rem;">
+                Last updated: November 2025 | Matrix Intelligence
+            </p>
+        </div>
+
+        <!-- Files Grid -->
+        <div class="files-grid">
+            <!-- Process Mining Market Analysis -->
+            <div class="matrix-file-card">
+                <div class="file-icon">📊</div>
+                <h3 style="margin: 0 0 0.5rem 0; color: #0f172a;">Process Mining Market Analysis</h3>
+                <p class="file-description">
+                    Comprehensive analysis of $11B process mining market, competitive landscape, 
+                    and Celonis market positioning for enterprise process optimization.
+                </p>
+                <a href="../secure-files/celonis/process-mining-market-analysis.pdf" 
+                   class="btn-primary"
+                   data-analytics="process-mining-analysis"
+                   download="Matrix_Celonis_Process_Mining_Market_Analysis.pdf">
+                    📄 Download PDF Report
+                </a>
+            </div>
+
+            <!-- Competitive Intelligence -->
+            <div class="matrix-file-card">
+                <div class="file-icon">🎯</div>
+                <h3 style="margin: 0 0 0.5rem 0; color: #0f172a;">Competitive Intelligence</h3>
+                <p class="file-description">
+                    Deep analysis of UiPath, Automation Anywhere, SAP Signavio with feature benchmarking, 
+                    pricing strategies, and enterprise adoption patterns.
+                </p>
+                <a href="../secure-files/celonis/competitive-intelligence-process-mining.pdf" 
+                   class="btn-primary"
+                   data-analytics="competitive-analysis"
+                   download="Matrix_Celonis_Competitive_Intelligence.pdf">
+                    📄 Download Competitive Report
+                </a>
+            </div>
+
+            <!-- Execution Management Strategy -->
+            <div class="matrix-file-card">
+                <div class="file-icon">🚀</div>
+                <h3 style="margin: 0 0 0.5rem 0; color: #0f172a;">Execution Management Strategy</h3>
+                <p class="file-description">
+                    EMS platform expansion roadmap, AI-powered process optimization, 
+                    and industry-specific solution development for manufacturing, healthcare, finance.
+                </p>
+                <a href="../secure-files/celonis/execution-management-strategy.pdf" 
+                   class="btn-primary"
+                   data-analytics="ems-strategy"
+                   download="Matrix_Celonis_Execution_Management_Strategy.pdf">
+                    📄 Download Strategy Plan
+                </a>
+            </div>
+
+            <!-- Enterprise Expansion Roadmap -->
+            <div class="matrix-file-card">
+                <div class="file-icon">🏢</div>
+                <h3 style="margin: 0 0 0.5rem 0; color: #0f172a;">Enterprise Expansion Roadmap</h3>
+                <p class="file-description">
+                    Fortune 500 account penetration strategy, partner ecosystem development, 
+                    and industry vertical expansion with revenue projection models.
+                </p>
+                <a href="../secure-files/celonis/enterprise-expansion-roadmap.pdf" 
+                   class="btn-primary"
+                   data-analytics="enterprise-expansion"
+                   download="Matrix_Celonis_Enterprise_Expansion_Roadmap.pdf">
+                    📄 Download Expansion Plan
+                </a>
+            </div>
+        </div>
+
+        <!-- Security Notice -->
+        <div style="text-align: center; padding: 2rem; background: #f1f5f9; border-radius: 8px;">
+            <p style="margin: 0; color: #64748b; font-size: 0.9rem;">
+                🔒 <strong>Confidential</strong> - This portal contains proprietary process mining intelligence.<br>
+                Unauthorized access or distribution is prohibited.
+            </p>
+        </div>
+    </div>
+
+    <script src="../assets/js/hub-analytics.js"></script>
+</body>
+</html>

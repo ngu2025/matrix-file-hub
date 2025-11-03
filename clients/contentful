@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Documents - Contentful | Matrix Intelligence</title>
+    <link rel="stylesheet" href="../assets/css/matrix-design.css">
+    <style>
+        .client-portal {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .hub-header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border-left: 4px solid #ff6b6b;
+            text-align: center;
+        }
+
+        .files-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            margin-bottom: 3rem;
+        }
+
+        .matrix-file-card {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .matrix-file-card:hover {
+            transform: translateY(-5px);
+            border-color: #ff6b6b;
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.1);
+        }
+
+        .back-button {
+            color: #ff6b6b;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            padding: 0.5rem 1rem;
+            border: 2px solid #ff6b6b;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: #ff6b6b;
+            color: white;
+        }
+
+        .client-badge {
+            background: #ff6b6b;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-left: 1rem;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .file-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .file-description {
+            color: #64748b;
+            margin: 0.5rem 0 1.5rem 0;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="client-portal">
+        <!-- Header Navigation -->
+        <div class="nav-container">
+            <a href="../index.html" class="back-button">
+                ← Back to Client Portal
+            </a>
+            <div style="display: flex; align-items: center;">
+                <span class="client-badge">Contentful</span>
+            </div>
+        </div>
+
+        <!-- Client Header -->
+        <div class="hub-header">
+            <h1>🛠️ Your Secure Documents</h1>
+            <p>Contentful • Headless CMS Intelligence & Content Platform Strategy</p>
+            <p style="margin-top: 1rem; opacity: 0.8; font-size: 0.9rem;">
+                Last updated: November 2025 | Matrix Intelligence
+            </p>
+        </div>
+
+        <!-- Files Grid -->
+        <div class="files-grid">
+            <!-- Headless CMS Market Analysis -->
+            <div class="matrix-file-card">
+                <div class="file-icon">📊</div>
+                <h3 style="margin: 0 0 0.5rem 0; color: #0f172a;">Headless CMS Market Analysis</h3>
+                <p class="file-description">
+                    Comprehensive analysis of $6.5B headless CMS market, composable content architecture trends, 
+                    and Contentful market leadership positioning.
+                </p>
+                <a href="../secure-files/contentful/headless-cms-market-analysis.pdf" 
+                   class="btn-primary"
+                   data-analytics="cms-market-analysis"
+                   download="Matrix_Contentful_Headless_CMS_Market_Analysis.pdf">
+                    📄 Download PDF Report
+                </a>
+            </div>
+
+            <!-- Competitive Intelligence -->
+            <div class="matrix-file-card">
+                <div class="file-icon">🎯</div>
+                <h3 style="margin: 0 0 0.5rem 0; color: #0f172a;">Competitive Intelligence</h3>
+                <p class="file-description">
+                    Deep analysis of ContentStack, Storyblok, Strapi, Sanity with API capability benchmarking, 
+                    pricing models, and developer experience comparison.
+                </p>
+                <a href="../secure-files/contentful/competitive-intelligence-cms.pdf" 
+                   class="btn-primary"
+                   data-analytics="competitive-analysis"
+                   download="Matrix_Contentful_Competitive_Intelligence.pdf">
+                    📄 Download Competitive Report
+                </a>
+            </div>
+
+            <!-- Composable Content Platform Strategy -->
+            <div class="matrix-file-card">
+                <div class="file-icon">🚀</div>
+                <h3 style="margin: 0 0 0.5rem 0; color: #0f172a;">Composable Content Platform Strategy</h3>
+                <p class="file-description">
+                    Platform ecosystem expansion, AI-content generation integration roadmap, 
+                    and enterprise digital experience platform vision.
+                </p>
+                <a href="../secure-files/contentful/composable-platform-strategy.pdf" 
+                   class="btn-primary"
+                   data-analytics="platform-strategy"
+                   download="Matrix_Contentful_Composable_Platform_Strategy.pdf">
+                    📄 Download Strategy Plan
+                </a>
+            </div>
+
+            <!-- Enterprise & Developer Expansion -->
+            <div class="matrix-file-card">
+                <div class="file-icon">👨‍💻</div>
+                <h3 style="margin: 0 0 0.5rem 0; color: #0f172a;">Enterprise & Developer Expansion</h3>
+                <p class="file-description">
+                    Developer ecosystem growth strategy, enterprise sales motion optimization, 
+                    and partner channel development with revenue projections.
+                </p>
+                <a href="../secure-files/contentful/enterprise-developer-expansion.pdf" 
+                   class="btn-primary"
+                   data-analytics="developer-expansion"
+                   download="Matrix_Contentful_Enterprise_Developer_Expansion.pdf">
+                    📄 Download Expansion Plan
+                </a>
+            </div>
+        </div>
+
+        <!-- Security Notice -->
+        <div style="text-align: center; padding: 2rem; background: #f1f5f9; border-radius: 8px;">
+            <p style="margin: 0; color: #64748b; font-size: 0.9rem;">
+                🔒 <strong>Confidential</strong> - This portal contains proprietary headless CMS intelligence.<br>
+                Unauthorized access or distribution is prohibited.
+            </p>
+        </div>
+    </div>
+
+    <script src="../assets/js/hub-analytics.js"></script>
+</body>
+</html>

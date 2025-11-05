@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matrix Intelligence - Secure File Hub</title>
     <style>
-        /* Matrix Design System */
+        /* Matrix Design System - ПРЕМИУМ ВЕРСИЯ */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -28,6 +28,7 @@
             background: rgba(15, 23, 42, 0.8);
             border-radius: 16px;
             border: 1px solid #334155;
+            backdrop-filter: blur(10px);
         }
 
         .hub-header h1 {
@@ -46,6 +47,14 @@
             font-weight: 300;
         }
 
+        /* НОВАЯ СЕТКА ДЛЯ ДОПОЛНИТЕЛЬНЫХ ПРОЕКТОВ */
+        .extended-projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
         .client-access-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -60,6 +69,23 @@
             padding: 30px;
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .access-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 220, 130, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .access-card:hover::before {
+            left: 100%;
         }
 
         .access-card:hover {
@@ -116,9 +142,79 @@
             color: #f8fafc;
         }
 
+        /* СТИЛИ ДЛЯ НОВЫХ ПРОЕКТОВ */
+        .new-project-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(135deg, #00dc82, #00c2ff);
+            color: #0f172a;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .project-stats {
+            display: flex;
+            gap: 15px;
+            margin: 15px 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-tag {
+            background: rgba(51, 65, 85, 0.6);
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            color: #94a3b8;
+            border: 1px solid #475569;
+        }
+
+        /* КНОПКА ДЛЯ ПРОЕКТОВ В РАБОТЕ */
+        .btn-in-progress {
+            display: inline-block;
+            background: #475569;
+            color: #94a3b8;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid #64748b;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+
+        /* СЕКЦИЯ БЫСТРОГО СТАРТА */
+        .quick-start-section {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid #334155;
+            border-radius: 16px;
+            padding: 40px;
+            margin: 60px 0;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .quick-start-section h2 {
+            font-size: 2rem;
+            margin: 0 0 16px 0;
+            background: linear-gradient(135deg, #00dc82, #00c2ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .quick-start-section p {
+            color: #94a3b8;
+            margin: 0 0 30px 0;
+            font-size: 1.1rem;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
-            .client-access-grid {
+            .client-access-grid,
+            .extended-projects-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
@@ -146,21 +242,20 @@
 </head>
 <body>
     <div class="matrix-container">
-        <!-- Премиум шапка в темной теме -->
+        <!-- ПРЕМИУМ ШАПКА -->
         <header class="hub-header">
             <h1>🔐 Matrix Intelligence File Hub</h1>
             <p>Secure document portal for enterprise clients • Professional Grade</p>
             <div style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">
-                <span class="status-active">● Active Clients: 6</span> • 
-                <span class="status-coming">● Total Reports: 24</span> • 
+                <span class="status-active">● Active Clients: 9</span> • 
+                <span class="status-coming">● Total Reports: 32</span> • 
                 <span>Last Updated: November 2025</span>
             </div>
         </header>
         
-        <!-- Сетка клиентов 3×2 -->
+        <!-- ОСНОВНАЯ СЕТКА КЛИЕНТОВ 3×2 -->
         <div class="client-access-grid">
             <!-- Row 1 -->
-            <!-- 360Learning -->
             <div class="access-card">
                 <h3>🏢 360Learning</h3>
                 <p>L&D Market Analysis & Strategic Documents • AI-Powered Insights<br>
@@ -170,7 +265,6 @@
                 </a>
             </div>
             
-            <!-- Algolia -->
             <div class="access-card">
                 <h3>🔍 Algolia</h3>
                 <p>Search Market Intelligence Reports • Competitive Analysis<br>
@@ -180,7 +274,6 @@
                 </a>
             </div>
             
-            <!-- Personio -->
             <div class="access-card">
                 <h3>💼 Personio</h3>
                 <p>HR Tech Analysis & Growth Strategy • Market Positioning<br>
@@ -191,7 +284,6 @@
             </div>
 
             <!-- Row 2 -->
-            <!-- Celonis -->
             <div class="access-card">
                 <h3>⚡ Celonis</h3>
                 <p>Process Mining Intelligence • Execution Management Strategy<br>
@@ -201,7 +293,6 @@
                 </a>
             </div>
 
-            <!-- Contentful -->
             <div class="access-card">
                 <h3>🛠️ Contentful</h3>
                 <p>Headless CMS Market Analysis • Composable Platform Strategy<br>
@@ -211,7 +302,6 @@
                 </a>
             </div>
 
-            <!-- Miro -->
             <div class="access-card">
                 <h3>🎨 Miro</h3>
                 <p>Visual Collaboration Intelligence • Platform Ecosystem Strategy<br>
@@ -222,25 +312,108 @@
             </div>
         </div>
 
-        <!-- Footer Information -->
+        <!-- ДОПОЛНИТЕЛЬНЫЕ ПРОЕКТЫ -->
+        <h2 style="text-align: center; font-size: 2rem; margin: 60px 0 30px 0; background: linear-gradient(135deg, #00dc82, #00c2ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+            🚀 Additional Project Portfolio
+        </h2>
+
+        <div class="extended-projects-grid">
+            <!-- ДОПОЛНИТЕЛЬНЫЙ ПРОЕКТ 1 -->
+            <div class="access-card">
+                <span class="new-project-badge">New</span>
+                <h3>🤖 AI Solutions Corp</h3>
+                <p>Enterprise AI Tools Market Analysis • Competitive Landscape<br>
+                <strong>Global • 300-500 employees • AI/ML Platform</strong></p>
+                <div class="project-stats">
+                    <span class="stat-tag">📊 12 Competitors</span>
+                    <span class="stat-tag">💰 5 Pricing Models</span>
+                </div>
+                <span class="btn-in-progress">
+                    🔄 Project in Progress
+                </span>
+            </div>
+
+            <!-- ДОПОЛНИТЕЛЬНЫЙ ПРОЕКТ 2 -->
+            <div class="access-card">
+                <span class="new-project-badge">Updated</span>
+                <h3>🏥 HealthTech Innovations</h3>
+                <p>Digital Health Market Expansion • Regulatory Compliance<br>
+                <strong>Europe • 200-400 employees • Healthcare SaaS</strong></p>
+                <div class="project-stats">
+                    <span class="stat-tag">🌍 7 Markets</span>
+                    <span class="stat-tag">📋 20+ Regulations</span>
+                </div>
+                <span class="btn-in-progress">
+                    🔄 Project in Progress
+                </span>
+            </div>
+
+            <!-- ДОПОЛНИТЕЛЬНЫЙ ПРОЕКТ 3 -->
+            <div class="access-card">
+                <span class="new-project-badge">Featured</span>
+                <h3>⚡ FinTech Dynamics</h3>
+                <p>Payment Solutions Market • Compliance & Security Analysis<br>
+                <strong>North America • 400-600 employees • Financial Tech</strong></p>
+                <div class="project-stats">
+                    <span class="stat-tag">💳 8 Payment Models</span>
+                    <span class="stat-tag">🔒 Security Audit</span>
+                </div>
+                <span class="btn-in-progress">
+                    🔄 Project in Progress
+                </span>
+            </div>
+        </div>
+
+        <!-- СЕКЦИЯ БЫСТРОГО СТАРТА -->
+        <div class="quick-start-section">
+            <h2>🎯 Ready to Start Your Project?</h2>
+            <p>Get your custom market analysis with zero upfront payments.<br>
+            Pay only for completed work you approve.</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+                <button class="btn-primary" onclick="startNewProject()">
+                    🚀 Start New Project
+                </button>
+                <button class="btn-secondary" onclick="viewDemo()">
+                    📊 View Demo Report
+                </button>
+                <button class="btn-secondary" onclick="contactTeam()">
+                    💬 Contact Team
+                </button>
+            </div>
+        </div>
+
+        <!-- ФУТЕР -->
         <div style="text-align: center; padding: 40px 20px; border-top: 1px solid #334155;">
             <p style="margin: 0; color: #94a3b8; font-size: 0.9rem;">
                 🔒 <strong>Enterprise Grade Security</strong> • All documents are encrypted and access-controlled<br>
-                © 2025 Matrix Intelligence • Proprietary & Confidential
+                ✨ <strong>Author & Developer:</strong> Gennady Konstantinov • Matrix Market Intelligence Project<br>
+                📧 <strong>Email:</strong> digitaleng.contact@gmail.com • 📱 <strong>Telegram:</strong> @DigitalEng_Support<br>
+                © 2025 Matrix Intelligence • Where data becomes strategy
             </p>
         </div>
     </div>
 
     <script>
-        // Basic analytics tracking
+        // ОБНОВЛЕННЫЕ ФУНКЦИИ БЕЗ РУССКОГО ТЕКСТА
+        function startNewProject() {
+            alert('🚀 Start New Project\n\nWe will contact you within 2 hours to:\n• Discuss your specific needs\n• Start research immediately\n• No upfront payments required\n\nPlease have your project details ready.');
+        }
+
+        function viewDemo() {
+            alert('📊 Demo Report Access\n\nYou will be redirected to our sample project portfolio where you can see:\n• Market analysis examples\n• Competitive intelligence reports\n• Strategic recommendations\n\nClick OK to continue.');
+        }
+
+        function contactTeam() {
+            alert('💬 Contact Matrix Intelligence Team\n\nEmail: digitaleng.contact@gmail.com\nTelegram: @DigitalEng_Support\nResponse time: 2-4 hours\n\nProject Author: Gennady Konstantinov\nWe specialize in transforming data into strategic insights.');
+        }
+
+        // Трекинг активности
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('Matrix Intelligence Hub loaded successfully');
+            console.log('Matrix Intelligence Premium Hub loaded');
             
-            // Track link clicks
-            document.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    console.log('Portal access:', this.href);
-                    // Add your analytics tracking here
+            document.querySelectorAll('.btn-primary').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    console.log('User accessed:', this.closest('.access-card').querySelector('h3').textContent);
                 });
             });
         });
